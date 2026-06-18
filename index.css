@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; font-family: 'Barlow', sans-serif; color: #36434D; background: #fff; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+::selection { background: #2E9D5C; color: #fff; }
+
+.nav-link:hover       { color: #fff !important; }
+.btn-green:hover      { background: #26824C !important; transform: translateY(-2px); }
+.btn-orange:hover     { background: #CB6B2C !important; transform: translateY(-2px); }
+.btn-white:hover      { background: rgba(255,255,255,0.18) !important; }
+.btn-quote:hover      { background: rgba(255,255,255,0.22) !important; }
+.service-card:hover   { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(16,34,50,0.13) !important; }
+.footer-link:hover    { color: #5FCF8E !important; }
+.cta-phone:hover      { transform: translateY(-2px); box-shadow: 0 16px 38px rgba(9,20,32,0.26) !important; }
+.read-story:hover     { gap: 13px !important; }
