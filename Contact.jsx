@@ -67,12 +67,12 @@ export default function Contact({ phone = PHONE }) {
             </div>
 
             {/* Embedded GHL form */}
-            <div style={{ minHeight: 955 }}>
+            <div style={{ minHeight: 1047 }}>
               <iframe
                 src="https://links.ikonicmarketing303.com/widget/form/7eTbLk8DXh94lcFz84OR"
-                style={{ display: 'block', width: '100%', height: '955px', border: 'none', borderRadius: 3 }}
-                id="polite-slide-in-right-7eTbLk8DXh94lcFz84OR"
-                data-layout="{'id':'POLITE_SLIDE_IN','minimizedTitle':'','isLeftAligned':false,'isRightAligned':true,'allowMinimize':false}"
+                style={{ width: '100%', height: '1047px', border: 'none', borderRadius: 3 }}
+                id="inline-7eTbLk8DXh94lcFz84OR"
+                data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
                 data-activation-type="alwaysActivated"
@@ -80,11 +80,10 @@ export default function Contact({ phone = PHONE }) {
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
                 data-form-name="Solar Lead Form"
-                data-height="955"
-                data-layout-iframe-id="polite-slide-in-right-7eTbLk8DXh94lcFz84OR"
+                data-height="1047"
+                data-layout-iframe-id="inline-7eTbLk8DXh94lcFz84OR"
                 data-form-id="7eTbLk8DXh94lcFz84OR"
                 title="Solar Lead Form"
-                data-modal-height="500"
               />
             </div>
           </div>
