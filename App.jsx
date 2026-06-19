@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Services from './Services';
 import About from './About';
@@ -11,7 +11,7 @@ const PHONE = '(303) 901-0048';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/"             element={<Home        phone={PHONE} />} />
         <Route path="/services"     element={<Services    phone={PHONE} />} />
@@ -19,6 +19,6 @@ export default function App() {
         <Route path="/service-area" element={<ServiceArea phone={PHONE} />} />
         <Route path="/contact"      element={<Contact     phone={PHONE} />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
