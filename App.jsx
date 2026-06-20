@@ -5,6 +5,8 @@ import Services from './Services';
 import About from './About';
 import ServiceArea from './ServiceArea';
 import Contact from './Contact';
+import PrivacyPolicy from './PrivacyPolicy';
+import Terms from './Terms';
 import './index.css';
 
 const PHONE = '(303) 901-0048';
@@ -17,7 +19,9 @@ export default function App() {
         <Route path="/services"     element={<Services    phone={PHONE} />} />
         <Route path="/about"        element={<About       phone={PHONE} />} />
         <Route path="/service-area" element={<ServiceArea phone={PHONE} />} />
-        <Route path="/contact"      element={<Contact     phone={PHONE} />} />
+        <Route path="/contact"        element={<Contact       phone={PHONE} />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy phone={PHONE} />} />
+        <Route path="/terms"          element={<Terms         phone={PHONE} />} />
       </Routes>
     </HashRouter>
   );

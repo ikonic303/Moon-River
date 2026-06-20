@@ -43,7 +43,10 @@ export default function Footer({ phone = PHONE }) {
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.09)', padding: '24px 0 30px', display: 'flex', flexWrap: 'wrap', gap: '10px 24px', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ color: 'rgba(255,255,255,0.42)', fontSize: 14 }}>© {year} Moon River Construction. All rights reserved.</div>
-          <div style={{ color: 'rgba(255,255,255,0.42)', fontSize: 14 }}>Concrete · Sprinkler Repair · Sod Installation</div>
+          <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'center' }}>
+            <Link to="/privacy-policy" style={{ color: 'rgba(255,255,255,0.42)', fontSize: 14, textDecoration: 'none', transition: 'color .15s ease' }} className="footer-link">Privacy Policy</Link>
+            <Link to="/terms"          style={{ color: 'rgba(255,255,255,0.42)', fontSize: 14, textDecoration: 'none', transition: 'color .15s ease' }} className="footer-link">Terms & Conditions</Link>
+          </div>
         </div>
       </div>
     </footer>
