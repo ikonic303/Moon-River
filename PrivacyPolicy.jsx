@@ -29,7 +29,7 @@ export default function PrivacyPolicy({ phone }) {
         <div style={{ width: '100%', maxWidth: 780, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
 
           <Section title="Overview">
-            Moon River Construction ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you visit <strong>moonriverconstruction.com</strong> or submit a quote request through our contact form.
+            Moon River Construction Co ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you visit <strong>moonriverconstruction.com</strong> or submit a quote request through our contact form.
           </Section>
 
           <Section title="Information We Collect">
@@ -46,7 +46,7 @@ export default function PrivacyPolicy({ phone }) {
           </Section>
 
           <Section title="SMS / Text Message Communications">
-            By submitting your phone number through our contact form, you may opt in to receive SMS text messages from Moon River Construction regarding your quote request, project updates, or follow-up communications.
+            By submitting your phone number through our contact form, you may opt in to receive SMS text messages from Moon River Construction Co regarding your quote request, project updates, or follow-up communications.
             <div style={{ margin: '16px 0', background: '#F4F6F5', border: '1px solid #E6EAE8', borderRadius: 12, padding: '18px 22px', fontWeight: 500, color: '#102232' }}>
               No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Opt-in consent and mobile data will not be sold, rented, or shared. Information sharing with subcontractors in support of service delivery (such as scheduling or customer service) is permitted.
             </div>
@@ -75,6 +75,10 @@ export default function PrivacyPolicy({ phone }) {
             We retain your contact information for as long as necessary to complete your project or respond to your inquiry. You may request deletion of your information at any time by contacting us directly.
           </Section>
 
+          <Section title="Data Security Practices">
+            Moon River Construction Co takes reasonable administrative, technical, and physical measures to protect personal information from unauthorized access, use, disclosure, alteration, or destruction. We limit access to personal information to authorized personnel and service providers who need it to provide our services, communicate with customers, and support business operations. While no system can be guaranteed 100% secure, we make reasonable efforts to protect the information submitted through our website, forms, and communication channels.
+          </Section>
+
           <Section title="Your Rights">
             You have the right to:
             <ul style={{ marginTop: 10, paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -96,7 +100,7 @@ export default function PrivacyPolicy({ phone }) {
           <Section title="Contact Us">
             If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
             <div style={{ marginTop: 14, background: '#F4F6F5', border: '1px solid #E6EAE8', borderRadius: 12, padding: '20px 24px' }}>
-              <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 18, color: '#102232', marginBottom: 6 }}>Moon River Construction</div>
+              <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 18, color: '#102232', marginBottom: 6 }}>Moon River Construction Co</div>
               <div>Brighton, Colorado</div>
               <div style={{ marginTop: 4 }}>
                 <a href="tel:+13039010048" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>(303) 901-0048</a>

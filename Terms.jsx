@@ -32,12 +32,12 @@ export default function Terms({ phone }) {
             By accessing and using <strong>moonriverconstruction.com</strong> (the "Site"), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use this Site.
           </Section>
 
-          <Section title="About Moon River Construction">
-            Moon River Construction is a locally owned construction and outdoor services business based in Brighton, Colorado. We provide concrete, sprinkler repair, and sod installation services to residential homeowners, property managers, realtors, and contractors in the Brighton area and surrounding communities.
+          <Section title="About Moon River Construction Co">
+            Moon River Construction Co is a locally owned construction and outdoor services business based in Brighton, Colorado. We provide concrete, sprinkler repair, and sod installation services to residential homeowners, property managers, realtors, and contractors in the Brighton area and surrounding communities.
           </Section>
 
           <Section title="SMS Messaging Program">
-            By submitting your phone number on this Site, you agree to receive SMS text messages from <strong>Moon River Construction</strong> regarding your quote request, project updates, scheduling, and related service communications.
+            By submitting your phone number on this Site, you agree to receive SMS text messages from <strong>Moon River Construction Co</strong> regarding your quote request, project updates, scheduling, and related service communications.
             <ul style={{ marginTop: 12, paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 8 }}>
               <li><strong>Message types:</strong> Quote follow-ups, appointment confirmations, project updates, and customer service responses.</li>
               <li><strong>To opt out:</strong> Reply <strong>STOP</strong> at any time to cancel SMS messages from us. You will receive a one-time confirmation message and no further messages will be sent.</li>
@@ -63,6 +63,10 @@ export default function Terms({ phone }) {
             </ul>
           </Section>
 
+          <Section title="Age Restriction">
+            You must be at least 18 years old to use our website, submit forms, request services, or opt in to receive SMS communications from Moon River Construction Co. By using this website or submitting your information, you confirm that you are 18 years of age or older.
+          </Section>
+
           <Section title="Quote Requests & Services">
             Submitting a quote request through our contact form does not constitute a binding contract or guarantee of service. All quotes are subject to:
             <ul style={{ marginTop: 10, paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -78,7 +82,7 @@ export default function Terms({ phone }) {
           </Section>
 
           <Section title="Intellectual Property">
-            All content on this Site — including text, photos, logos, and graphics — is the property of Moon River Construction or its content suppliers and is protected by applicable copyright and trademark laws. You may not reproduce, distribute, or create derivative works without our written permission.
+            All content on this Site — including text, photos, logos, and graphics — is the property of Moon River Construction Co or its content suppliers and is protected by applicable copyright and trademark laws. You may not reproduce, distribute, or create derivative works without our written permission.
           </Section>
 
           <Section title="Disclaimer of Warranties">
@@ -86,7 +90,7 @@ export default function Terms({ phone }) {
           </Section>
 
           <Section title="Limitation of Liability">
-            To the fullest extent permitted by law, Moon River Construction shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of this Site or the information contained on it.
+            To the fullest extent permitted by law, Moon River Construction Co shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of this Site or the information contained on it.
           </Section>
 
           <Section title="Governing Law">
@@ -94,7 +98,7 @@ export default function Terms({ phone }) {
           </Section>
 
           <Section title="Compliance">
-            Moon River Construction operates its SMS messaging program in compliance with applicable federal and state laws, including the Telephone Consumer Protection Act (TCPA) and industry standards set by the CTIA. We do not send messages containing prohibited content including but not limited to phishing, illegal substances, or deceptive marketing.
+            Moon River Construction Co operates its SMS messaging program in compliance with applicable federal and state laws, including the Telephone Consumer Protection Act (TCPA) and industry standards set by the CTIA. We do not send messages containing prohibited content including but not limited to phishing, illegal substances, or deceptive marketing.
           </Section>
 
           <Section title="Changes to These Terms">
@@ -104,7 +108,7 @@ export default function Terms({ phone }) {
           <Section title="Contact Us">
             If you have questions about these Terms and Conditions, please reach out:
             <div style={{ marginTop: 14, background: '#F4F6F5', border: '1px solid #E6EAE8', borderRadius: 12, padding: '20px 24px' }}>
-              <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 18, color: '#102232', marginBottom: 6 }}>Moon River Construction</div>
+              <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 18, color: '#102232', marginBottom: 6 }}>Moon River Construction Co</div>
               <div>Brighton, Colorado</div>
               <div style={{ marginTop: 4 }}>
                 <a href="tel:+13039010048" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>(303) 901-0048</a>
