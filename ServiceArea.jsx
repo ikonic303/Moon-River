@@ -6,9 +6,9 @@ import Footer from './Footer';
 const areas = ['Brighton', 'Commerce City', 'Thornton', 'Henderson', 'Lochbuie', 'Fort Lupton', 'Todd Creek', 'Reunion', 'Northglenn'];
 
 const workTypes = [
-  { t: 'Residential Neighborhoods', d: 'Homeowners across Brighton-area neighborhoods looking for quality outdoor and concrete work.' },
+  { t: 'Residential Neighborhoods', d: 'Homeowners across Brighton-area neighborhoods looking for quality concrete, landscaping, and remodeling work.' },
   { t: 'Property Management Jobs',  d: 'Reliable, scheduled service for managers handling rentals and multi-property portfolios.' },
-  { t: 'Realtor Referral Work',     d: 'Fast turnarounds to get listings curb-ready — sod, concrete repairs, and cleanups.' },
+  { t: 'Realtor Referral Work',     d: 'Fast turnarounds to get listings ready — concrete, landscaping, and interior updates.' },
 ];
 
 const PinIcon = ({ size = 14 }) => (

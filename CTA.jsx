@@ -5,7 +5,7 @@ const PHONE = '(303) 901-0048';
 
 export default function CTA({
   phone   = PHONE,
-  heading = 'Need concrete work, sprinkler repair, or new sod?',
+  heading = 'Planning a project, inside or out?',
   text    = 'Get a fast quote from Moon River Construction today.',
 }) {
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');

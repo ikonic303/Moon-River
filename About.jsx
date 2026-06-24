@@ -128,7 +128,7 @@ export default function About() {
                 Moon River Construction is a local Brighton-based construction and outdoor service business built on hard work, referrals, and reliable service.
               </p>
               <p style={{ color: '#4A5862', fontSize: 'clamp(17px,1.6vw,19px)', lineHeight: 1.65, margin: '0 0 18px' }}>
-                We currently serve homeowners and property managers with concrete, sprinkler repair, and sod installation — and we're growing one job at a time.
+                We serve homeowners, property managers, and contractors with concrete, landscaping, and outdoor living projects — plus full interior remodeling and home renovations — growing one job at a time.
               </p>
               <p style={{ color: '#4A5862', fontSize: 'clamp(17px,1.6vw,19px)', lineHeight: 1.65, margin: 0 }}>
                 One truck now, but a reputation we're building with every project. When you call Moon River, you get an honest crew that shows up, works hard, and treats your property like our own.

@@ -28,6 +28,36 @@ const QuoteBtn = () => (
   </Link>
 );
 
+const serviceGroups = [
+  {
+    title: 'Exterior Services',
+    items: [
+      'Concrete Installation & Repair',
+      'Patios & Walkways',
+      'Driveways',
+      'Retaining Walls',
+      'Decks & Outdoor Living Spaces',
+      'Landscaping & Landscape Design',
+      'Artificial Turf',
+      'Irrigation & Sprinkler Systems',
+      'Fencing',
+      'Excavation & Grading',
+    ],
+  },
+  {
+    title: 'Interior Remodeling',
+    items: [
+      'Kitchen Remodeling',
+      'Bathroom Remodeling',
+      'Basement Finishing',
+      'Interior Painting',
+      'Flooring Installation (LVP, Tile, Hardwood)',
+      'Drywall Repair & Installation',
+      'Trim & Finish Carpentry',
+    ],
+  },
+];
+
 export default function Services({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
@@ -42,8 +72,8 @@ export default function Services({ phone }) {
       }}>
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
           <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#5FCF8E', marginBottom: 14 }}>Our Services</div>
-          <h1 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, color: '#fff', fontSize: 'clamp(34px,5.2vw,58px)', lineHeight: 1.05, letterSpacing: '-0.5px', margin: '0 0 18px', maxWidth: 760 }}>Concrete, Sprinkler Repair &amp; Sod Installation</h1>
-          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 'clamp(17px,2vw,21px)', lineHeight: 1.55, margin: 0, maxWidth: 600 }}>Quality outdoor and construction work for homeowners, property managers, realtors, and contractors across the Brighton area.</p>
+          <h1 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, color: '#fff', fontSize: 'clamp(34px,5.2vw,58px)', lineHeight: 1.05, letterSpacing: '-0.5px', margin: '0 0 18px', maxWidth: 760 }}>Concrete, Landscaping, Remodeling &amp; Home Renovations</h1>
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 'clamp(17px,2vw,21px)', lineHeight: 1.55, margin: 0, maxWidth: 600 }}>From outdoor living spaces to complete interior remodels, we bring quality craftsmanship to every project for homeowners, property managers, realtors, and contractors across the Brighton area.</p>
         </div>
       </section>
 
@@ -133,6 +163,34 @@ export default function Services({ phone }) {
               </div>
               <QuoteBtn />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPLETE SERVICE LIST */}
+      <section style={{ background: '#102232', padding: 'clamp(56px,8vw,104px) 0' }}>
+        <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
+          <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 48px' }}>
+            <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#5FCF8E', marginBottom: 12 }}>Everything We Offer</div>
+            <h2 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 'clamp(26px,3.6vw,42px)', color: '#fff', lineHeight: 1.1, letterSpacing: '-0.4px', margin: '0 0 14px' }}>Complete Service List</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18, lineHeight: 1.6, margin: 0 }}>One local crew for your whole project — exterior improvements and full interior remodels.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(20px,3vw,30px)' }}>
+            {serviceGroups.map(g => (
+              <div key={g.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: 'clamp(28px,3vw,40px)' }}>
+                <h3 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 24, color: '#fff', margin: '0 0 22px' }}>{g.title}</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(210px,1fr))', gap: '14px 18px' }}>
+                  {g.items.map(item => (
+                    <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5FCF8E" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span style={{ color: 'rgba(255,255,255,0.88)', fontSize: 15.5, fontWeight: 500 }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
