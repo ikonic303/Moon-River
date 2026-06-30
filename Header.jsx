@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: 'Services',     to: '/services',     key: 'services' },
   { label: 'About',        to: '/about',        key: 'about' },
   { label: 'Service Area', to: '/service-area', key: 'area' },
+  { label: 'Blog',         to: '/blog',         key: 'blog' },
   { label: 'Contact',      to: '/contact',      key: 'contact' },
 ];
 
@@ -52,7 +53,7 @@ export default function Header({ active = 'home', phone = PHONE }) {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18,
       }}>
         <Link to="/" onClick={() => setMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-          <img src="assets/logo-full-white.png" alt="Moon River Construction logo" style={{ height: 64, width: 'auto', display: 'block' }} />
+          <img src="/assets/logo-full-white.png" alt="Moon River Construction logo" style={{ height: 64, width: 'auto', display: 'block' }} />
         </Link>
 
         {!isMobile && (

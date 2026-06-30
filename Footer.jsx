@@ -13,7 +13,7 @@ export default function Footer({ phone = PHONE }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 40, paddingBottom: 46 }}>
           <div>
             <div style={{ marginBottom: 18 }}>
-              <img src="assets/logo-full-white.png" alt="Moon River Construction" style={{ height: 104, width: 'auto', display: 'block' }} />
+              <img src="/assets/logo-full-white.png" alt="Moon River Construction" style={{ height: 104, width: 'auto', display: 'block' }} />
             </div>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 15.5, lineHeight: 1.6, margin: 0, maxWidth: 300 }}>
               A local, family-supported construction, remodeling, and outdoor services business serving Brighton, Colorado and surrounding areas.
@@ -33,6 +33,7 @@ export default function Footer({ phone = PHONE }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
               <Link to="/about"        className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>About</Link>
               <Link to="/service-area" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Service Area</Link>
+              <Link to="/blog"         className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Blog</Link>
               <Link to="/contact"      className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Request a Quote</Link>
             </div>
           </div>

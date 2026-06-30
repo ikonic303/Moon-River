@@ -22,7 +22,7 @@ export default function About() {
       {/* PAGE HERO */}
       <section style={{
         position: 'relative',
-        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.93) 0%, rgba(9,20,32,0.7) 100%), url('assets/photo-patio-dusk.jpg')",
+        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.93) 0%, rgba(9,20,32,0.7) 100%), url('/assets/photo-patio-dusk.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center 55%',
         padding: 'clamp(64px,11vw,118px) 0',
@@ -68,7 +68,7 @@ export default function About() {
           }}>
             <div style={{ position: 'relative' }}>
               <img
-                src="assets/photo-walkway.jpg"
+                src="/assets/photo-walkway.jpg"
                 alt="Moon River Construction concrete work"
                 style={{
                   width: '100%',
@@ -92,7 +92,7 @@ export default function About() {
                 alignItems: 'center',
                 gap: 14,
               }}>
-                <img src="assets/logo-icon-white.png" alt="" style={{ height: 40, width: 'auto' }} />
+                <img src="/assets/logo-icon-white.png" alt="" style={{ height: 40, width: 'auto' }} />
                 <div style={{ lineHeight: 1.15 }}>
                   <div style={{
                     fontFamily: "'Barlow Semi Condensed', sans-serif",

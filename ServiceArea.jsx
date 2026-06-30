@@ -25,7 +25,7 @@ export default function ServiceArea({ phone }) {
       {/* PAGE HERO */}
       <section style={{
         position: 'relative',
-        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.93) 0%, rgba(9,20,32,0.7) 100%), url('assets/photo-edging.jpg')",
+        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.93) 0%, rgba(9,20,32,0.7) 100%), url('/assets/photo-edging.jpg')",
         backgroundSize: 'cover', backgroundPosition: 'center 50%',
         padding: 'clamp(64px,11vw,118px) 0',
       }}>
@@ -55,7 +55,7 @@ export default function ServiceArea({ phone }) {
             <div style={{
               position: 'relative', borderRadius: 16, overflow: 'hidden',
               minHeight: 'clamp(320px,42vw,460px)',
-              backgroundImage: "linear-gradient(180deg, rgba(9,20,32,0.12) 0%, rgba(9,20,32,0.8) 100%), url('assets/photo-pad.jpg')",
+              backgroundImage: "linear-gradient(180deg, rgba(9,20,32,0.12) 0%, rgba(9,20,32,0.8) 100%), url('/assets/photo-pad.jpg')",
               backgroundSize: 'cover', backgroundPosition: 'center',
               boxShadow: '0 24px 50px rgba(16,34,50,0.18)',
               display: 'flex', alignItems: 'flex-end',

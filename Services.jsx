@@ -66,7 +66,7 @@ export default function Services({ phone }) {
       {/* PAGE HERO */}
       <section style={{
         position: 'relative',
-        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.93) 0%, rgba(9,20,32,0.7) 100%), url('assets/photo-pad.jpg')",
+        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.93) 0%, rgba(9,20,32,0.7) 100%), url('/assets/photo-pad.jpg')",
         backgroundSize: 'cover', backgroundPosition: 'center 60%',
         padding: 'clamp(64px,11vw,118px) 0',
       }}>
@@ -82,7 +82,7 @@ export default function Services({ phone }) {
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(36px,5vw,64px)', alignItems: 'center' }}>
             <div>
-              <img src="assets/photo-concrete.jpg" alt="Concrete flatwork and patios" style={{ width: '100%', height: 'clamp(300px,40vw,440px)', objectFit: 'cover', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.16)' }} />
+              <img src="/assets/photo-concrete.jpg" alt="Concrete flatwork and patios" style={{ width: '100%', height: 'clamp(300px,40vw,440px)', objectFit: 'cover', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.16)' }} />
             </div>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
@@ -112,7 +112,7 @@ export default function Services({ phone }) {
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(36px,5vw,64px)', alignItems: 'center' }}>
             <div style={{ order: 2 }}>
-              <img src="assets/photo-sprinkler.jpg" alt="Sprinkler and irrigation repair" style={{ width: '100%', height: 'clamp(300px,40vw,440px)', objectFit: 'cover', objectPosition: 'center 40%', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.16)' }} />
+              <img src="/assets/photo-sprinkler.jpg" alt="Sprinkler and irrigation repair" style={{ width: '100%', height: 'clamp(300px,40vw,440px)', objectFit: 'cover', objectPosition: 'center 40%', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.16)' }} />
             </div>
             <div style={{ order: 1 }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
@@ -142,7 +142,7 @@ export default function Services({ phone }) {
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(36px,5vw,64px)', alignItems: 'center' }}>
             <div>
-              <img src="assets/photo-sod.jpg" alt="Fresh sod installation" style={{ width: '100%', height: 'clamp(300px,40vw,440px)', objectFit: 'cover', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.16)' }} />
+              <img src="/assets/photo-sod.jpg" alt="Fresh sod installation" style={{ width: '100%', height: 'clamp(300px,40vw,440px)', objectFit: 'cover', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.16)' }} />
             </div>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>

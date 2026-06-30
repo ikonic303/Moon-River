@@ -65,7 +65,7 @@ export default function Home({ phone = PHONE }) {
       {/* HERO */}
       <section style={{
         position: 'relative',
-        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.94) 0%, rgba(9,20,32,0.78) 42%, rgba(9,20,32,0.38) 100%), url('assets/photo-hero.jpg')",
+        backgroundImage: "linear-gradient(100deg, rgba(9,20,32,0.94) 0%, rgba(9,20,32,0.78) 42%, rgba(9,20,32,0.38) 100%), url('/assets/photo-hero.jpg')",
         backgroundSize: 'cover', backgroundPosition: 'center 62%',
         minHeight: 'clamp(560px,86vh,800px)', display: 'flex', alignItems: 'center',
       }}>
@@ -213,9 +213,9 @@ export default function Home({ phone = PHONE }) {
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 'clamp(36px,5vw,64px)', alignItems: 'center' }}>
             <div style={{ position: 'relative' }}>
-              <img src="assets/photo-patio-dusk.jpg" alt="Moon River Construction stamped concrete patio project" style={{ width: '100%', height: 'clamp(320px,46vw,460px)', objectFit: 'cover', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.18)' }} />
+              <img src="/assets/photo-patio-dusk.jpg" alt="Moon River Construction stamped concrete patio project" style={{ width: '100%', height: 'clamp(320px,46vw,460px)', objectFit: 'cover', borderRadius: 16, display: 'block', boxShadow: '0 24px 50px rgba(16,34,50,0.18)' }} />
               <div style={{ position: 'absolute', bottom: -22, right: -8, background: '#102232', color: '#fff', padding: '20px 26px', borderRadius: 14, boxShadow: '0 16px 40px rgba(16,34,50,0.3)', display: 'flex', alignItems: 'center', gap: 14 }}>
-                <img src="assets/logo-icon-white.png" alt="" style={{ height: 40, width: 'auto' }} />
+                <img src="/assets/logo-icon-white.png" alt="" style={{ height: 40, width: 'auto' }} />
                 <div style={{ lineHeight: 1.15 }}>
                   <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 18, letterSpacing: '.5px' }}>Family-Supported</div>
                   <div style={{ color: '#7BE0A6', fontSize: 13.5, fontWeight: 500 }}>Local to Brighton, CO</div>
