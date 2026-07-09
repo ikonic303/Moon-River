@@ -23,7 +23,7 @@ function urlTag(loc, { lastmod, priority, freq } = {}) {
 }
 
 export default async function handler(req, res) {
-  const site = (process.env.SITE_URL || 'https://moonriverconstructionco.com').replace(/\/$/, '');
+  const site = (process.env.SITE_URL || 'https://www.moonriverconstructionco.com').replace(/\/$/, '');
   let posts = [];
   try {
     posts = await getAllPosts();

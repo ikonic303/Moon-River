@@ -134,7 +134,7 @@ export default async function handler(req, res) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'GEMINI_API_KEY not configured' });
 
-  const siteUrl = (process.env.SITE_URL || 'https://moonriverconstructionco.com').replace(/\/$/, '');
+  const siteUrl = (process.env.SITE_URL || 'https://www.moonriverconstructionco.com').replace(/\/$/, '');
   const pick = TOPICS[Math.floor(Math.random() * TOPICS.length)];
 
   let lastErr;
