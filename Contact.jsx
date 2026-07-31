@@ -17,6 +17,12 @@ export default function Contact({ phone = PHONE }) {
     };
   }, []);
 
+  useEffect(() => {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+    }
+  }, []);
+
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Header active="contact" phone={phone} />
