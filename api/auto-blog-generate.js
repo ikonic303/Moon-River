@@ -118,6 +118,20 @@ async function notify(post, siteUrl) {
   }
 }
 
+// Sitemap and blog pages are prerendered at build time (see routes.jsx), so a new post
+// isn't reachable until the next deploy. Set VERCEL_DEPLOY_HOOK_URL (Project Settings ->
+// Git -> Deploy Hooks) to have this cron trigger a rebuild right after publishing.
+async function triggerRedeploy() {
+  const hook = process.env.VERCEL_DEPLOY_HOOK_URL;
+  if (!hook) return false;
+  try {
+    await fetch(hook, { method: 'POST' });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function authorized(req) {
   const secret = process.env.CRON_SECRET;
   if (!secret) return false;
@@ -159,10 +173,11 @@ export default async function handler(req, res) {
 
       await savePost(post);
       const emailed = await notify(post, siteUrl);
+      const redeployed = await triggerRedeploy();
 
       return res.status(200).json({
         ok: true, slug: post.slug, title: post.title, category: post.category,
-        url: `${siteUrl}/blog/${post.slug}`, emailed, attempt,
+        url: `${siteUrl}/blog/${post.slug}`, emailed, redeployed, attempt,
       });
     } catch (err) {
       lastErr = err;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
@@ -61,6 +62,10 @@ const serviceGroups = [
 export default function Services({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Our Services | Brighton, CO Concrete &amp; Remodeling</title>
+        <meta name="description" content="Concrete, patios, driveways, landscaping, sod, kitchen and bath remodeling, flooring, and more for homeowners in Brighton, Colorado. Get a free quote." />
+      </Head>
       <Header active="services" phone={phone} />
 
       {/* PAGE HERO */}

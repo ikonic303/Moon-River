@@ -1,9 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import { ViteReactSSG } from 'vite-react-ssg';
+import { routes } from './routes';
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+export const createRoot = ViteReactSSG(
+  { routes, basename: '/' },
+  ({ router, isClient }) => {
+    if (!isClient) return;
+    let prevPath = router.state.location.pathname;
+    router.subscribe((state) => {
+      const path = state.location.pathname;
+      if (path !== prevPath) {
+        prevPath = path;
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'PageView');
+        }
+      }
+    });
+  },
+);

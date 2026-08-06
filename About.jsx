@@ -1,4 +1,5 @@
 import React from 'react';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
@@ -17,6 +18,10 @@ const values = [
 export default function About() {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>About Us | Moon River Construction, Brighton CO</title>
+        <meta name="description" content="Moon River Construction is a local, family-supported contractor serving Brighton, CO homeowners with honest, reliable concrete, landscaping, and remodeling work." />
+      </Head>
       <Header active="about" />
 
       {/* PAGE HERO */}

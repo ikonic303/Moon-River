@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -25,6 +26,10 @@ export default function Contact({ phone = PHONE }) {
 
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Contact Us | Free Quote | Brighton, CO</title>
+        <meta name="description" content="Request a free, no-pressure quote from Moon River Construction. Call, text, or fill out our form — we serve Brighton, CO and nearby areas." />
+      </Head>
       <Header active="contact" phone={phone} />
 
       {/* PAGE HERO */}

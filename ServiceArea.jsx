@@ -1,4 +1,5 @@
 import React from 'react';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
@@ -20,6 +21,10 @@ const PinIcon = ({ size = 14 }) => (
 export default function ServiceArea({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Service Area | Brighton, CO &amp; Nearby Communities</title>
+        <meta name="description" content="Moon River Construction serves Brighton, Commerce City, Thornton, Henderson, Lochbuie, Fort Lupton, and nearby Colorado communities." />
+      </Head>
       <Header active="area" phone={phone} />
 
       {/* PAGE HERO */}

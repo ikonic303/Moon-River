@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -13,6 +14,10 @@ const Section = ({ title, children }) => (
 export default function Terms({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Terms &amp; Conditions | Moon River Construction</title>
+        <meta name="description" content="Terms and conditions for using moonriverconstructionco.com and requesting services from Moon River Construction in Brighton, CO." />
+      </Head>
       <Header phone={phone} />
 
       {/* HERO */}

@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 
 const PHONE = '(303) 901-0048';
+
+const BUSINESS_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'GeneralContractor',
+  name: 'Moon River Construction',
+  telephone: '(303) 901-0048',
+  areaServed: 'Brighton, CO',
+  url: 'https://www.moonriverconstructionco.com/',
+};
 
 const NAV_LINKS = [
   { label: 'Home',         to: '/',             key: 'home' },
@@ -39,6 +49,10 @@ export default function Header({ active = 'home', phone = PHONE }) {
     : '0 1px 0 rgba(255,255,255,0.06)';
 
   return (
+    <>
+    <Head>
+      <script type="application/ld+json">{JSON.stringify(BUSINESS_LD)}</script>
+    </Head>
     <header style={{
       position: 'sticky', top: 0, zIndex: 60,
       background: 'rgba(13,25,38,0.94)',
@@ -131,5 +145,6 @@ export default function Header({ active = 'home', phone = PHONE }) {
         </div>
       )}
     </header>
+    </>
   );
 }

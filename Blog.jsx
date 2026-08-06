@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
@@ -14,21 +15,14 @@ const Chip = ({ children }) => (
 );
 
 export default function Blog({ phone }) {
-  const [posts, setPosts] = useState(null);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    document.title = 'Blog | Moon River Construction — Brighton, CO';
-    let alive = true;
-    fetch('/api/posts')
-      .then((r) => r.ok ? r.json() : Promise.reject())
-      .then((d) => { if (alive) setPosts(d.posts || []); })
-      .catch(() => { if (alive) setError(true); });
-    return () => { alive = false; };
-  }, []);
+  const posts = useLoaderData() || [];
 
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Blog | Tips &amp; Guides | Moon River Construction</title>
+        <meta name="description" content="Practical tips on concrete, landscaping, remodeling, and home maintenance from Moon River Construction, serving Brighton, Colorado." />
+      </Head>
       <Header active="blog" phone={phone} />
 
       {/* HERO */}
@@ -43,19 +37,13 @@ export default function Blog({ phone }) {
       {/* LIST */}
       <section style={{ padding: 'clamp(48px,7vw,90px) 0', minHeight: 360 }}>
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
-          {posts === null && !error && (
-            <p style={{ color: '#5C6873', fontSize: 17 }}>Loading posts…</p>
-          )}
-          {error && (
-            <p style={{ color: '#5C6873', fontSize: 17 }}>We couldn’t load posts right now. Please check back soon.</p>
-          )}
-          {posts && posts.length === 0 && (
+          {posts.length === 0 && (
             <div style={{ textAlign: 'center', maxWidth: 520, margin: '0 auto', padding: '40px 0' }}>
               <h2 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 28, color: '#102232', margin: '0 0 10px' }}>New posts coming soon</h2>
               <p style={{ color: '#5C6873', fontSize: 17, margin: 0 }}>Our first articles are on the way. In the meantime, give us a call for help with your project.</p>
             </div>
           )}
-          {posts && posts.length > 0 && (
+          {posts.length > 0 && (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: 26 }}>
               {posts.map((p) => (
                 <Link key={p.slug} to={`/blog/${p.slug}`} className="service-card" style={{

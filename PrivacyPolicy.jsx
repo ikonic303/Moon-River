@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -13,6 +14,10 @@ const Section = ({ title, children }) => (
 export default function PrivacyPolicy({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Privacy Policy | Moon River Construction</title>
+        <meta name="description" content="How Moon River Construction collects, uses, and protects your information when you visit moonriverconstructionco.com or request a quote." />
+      </Head>
       <Header phone={phone} />
 
       {/* HERO */}

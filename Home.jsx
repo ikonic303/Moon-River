@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
@@ -60,6 +61,10 @@ export default function Home({ phone = PHONE }) {
 
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
+      <Head>
+        <title>Concrete, Landscaping &amp; Remodeling | Brighton, CO</title>
+        <meta name="description" content="Moon River Construction is a Brighton, CO contractor for concrete, landscaping, and interior/exterior remodeling. Free quotes, fast response." />
+      </Head>
       <Header active="home" phone={phone} />
 
       {/* HERO */}
