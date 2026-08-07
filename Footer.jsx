@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PHONE = '(303) 901-0048';
+const PHONE = '(720) 807-0379';
 
 export default function Footer({ phone = PHONE }) {
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');

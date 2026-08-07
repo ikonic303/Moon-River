@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Head } from 'vite-react-ssg';
 
-const PHONE = '(303) 901-0048';
+const PHONE = '(720) 807-0379';
 
 const BUSINESS_LD = {
   '@context': 'https://schema.org',
   '@type': 'GeneralContractor',
   name: 'Moon River Construction',
-  telephone: '(303) 901-0048',
+  telephone: '(720) 807-0379',
   areaServed: 'Brighton, CO',
   url: 'https://www.moonriverconstructionco.com/',
 };

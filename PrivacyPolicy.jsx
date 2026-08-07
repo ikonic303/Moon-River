@@ -137,7 +137,7 @@ export default function PrivacyPolicy({ phone }) {
               <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 18, color: '#102232', marginBottom: 6 }}>Moon River Construction Co</div>
               <div>Brighton, Colorado</div>
               <div style={{ marginTop: 4 }}>
-                <a href="tel:+13039010048" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>(303) 901-0048</a>
+                <a href="tel:+17208070379" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>(720) 807-0379</a>
               </div>
               <div style={{ marginTop: 4 }}>
                 <Link to="/contact" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>Contact page</Link>

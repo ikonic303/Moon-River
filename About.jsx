@@ -4,7 +4,7 @@ import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
 
-const PHONE = '(303) 901-0048';
+const PHONE = '(720) 807-0379';
 
 const values = [
   { t: 'Honest & Straightforward', d: 'Clear quotes, no surprises, and work we stand behind.' },

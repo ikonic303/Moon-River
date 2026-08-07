@@ -5,7 +5,7 @@ import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
 
-const PHONE = '(303) 901-0048';
+const PHONE = '(720) 807-0379';
 
 const heroTrust = ['Local Brighton-area crew', 'Free, no-pressure quotes', 'Fast same-day response'];
 

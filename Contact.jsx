@@ -3,7 +3,7 @@ import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import Footer from './Footer';
 
-const PHONE = '(303) 901-0048';
+const PHONE = '(720) 807-0379';
 
 export default function Contact({ phone = PHONE }) {
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');

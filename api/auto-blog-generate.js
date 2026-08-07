@@ -34,7 +34,7 @@ const TOPICS = [
 const BUSINESS = {
   name: 'Moon River Construction',
   area: 'Brighton, Colorado and surrounding Front Range communities',
-  phone: '(303) 901-0048',
+  phone: '(720) 807-0379',
 };
 
 const MODEL = 'gemini-2.5-flash';

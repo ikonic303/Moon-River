@@ -46,8 +46,8 @@ export default function Terms({ phone }) {
             <ul style={{ marginTop: 12, paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 8 }}>
               <li><strong>Message types:</strong> Quote follow-ups, appointment confirmations, project updates, and customer service responses.</li>
               <li><strong>To opt out:</strong> Reply <strong>STOP</strong> at any time to cancel SMS messages from us. You will receive a one-time confirmation message and no further messages will be sent.</li>
-              <li><strong>To re-subscribe:</strong> If you have opted out and wish to receive messages again, reply <strong>START</strong> or contact us directly at (303) 901-0048.</li>
-              <li><strong>For help:</strong> Reply <strong>HELP</strong> or contact us at (303) 901-0048 or through our website contact form.</li>
+              <li><strong>To re-subscribe:</strong> If you have opted out and wish to receive messages again, reply <strong>START</strong> or contact us directly at (720) 807-0379.</li>
+              <li><strong>For help:</strong> Reply <strong>HELP</strong> or contact us at (720) 807-0379 or through our website contact form.</li>
               <li><strong>Message frequency:</strong> Message frequency will vary based on your project and communication needs.</li>
               <li><strong>Rates:</strong> Message and data rates may apply for messages sent to you from us and to us from you. Check with your mobile carrier for details.</li>
               <li><strong>Carrier disclaimer:</strong> Carriers are not liable for delayed or undelivered messages.</li>
@@ -116,7 +116,7 @@ export default function Terms({ phone }) {
               <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 18, color: '#102232', marginBottom: 6 }}>Moon River Construction Co</div>
               <div>Brighton, Colorado</div>
               <div style={{ marginTop: 4 }}>
-                <a href="tel:+13039010048" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>(303) 901-0048</a>
+                <a href="tel:+17208070379" style={{ color: '#2E9D5C', textDecoration: 'none', fontWeight: 600 }}>(720) 807-0379</a>
               </div>
             </div>
           </Section>

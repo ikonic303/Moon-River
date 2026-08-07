@@ -11,7 +11,7 @@ import Terms from './Terms';
 import NotFound from './NotFound';
 import { getAllPosts, getPost } from './lib/blog.js';
 
-export const PHONE = '(303) 901-0048';
+export const PHONE = '(720) 807-0379';
 
 async function blogListLoader() {
   if (!import.meta.env.SSR) return null;
