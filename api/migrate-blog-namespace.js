@@ -28,6 +28,7 @@ export default async function handler(req, res) {
 
   const migrated = [];
   const skippedOwners = new Set();
+  const statusTally = {};
   let cursor = '0';
 
   do {
@@ -42,6 +43,8 @@ export default async function handler(req, res) {
         await redis.set(NEW_POST_KEY(slug), post);
         await redis.sadd(NEW_SLUGS_KEY, slug);
         migrated.push(slug);
+        const statusKey = JSON.stringify(post.status);
+        statusTally[statusKey] = (statusTally[statusKey] || 0) + 1;
       } else if (post) {
         skippedOwners.add(post.author || 'unknown');
       }
@@ -52,6 +55,7 @@ export default async function handler(req, res) {
     ok: true,
     migratedCount: migrated.length,
     migrated,
+    statusTally,
     skippedOtherOwners: [...skippedOwners],
   });
 }
