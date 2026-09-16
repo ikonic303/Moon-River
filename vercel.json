@@ -2,6 +2,7 @@
   "crons": [{ "path": "/api/auto-blog-generate", "schedule": "0 14 * * *" }],
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/api/sitemap" }
+    { "source": "/sitemap.xml", "destination": "/api/sitemap" },
+    { "source": "/service-area/:slug", "destination": "/service-area/:slug.html" }
   ]
 }

@@ -1,15 +1,28 @@
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 import { getAllPosts } from '../lib/blog.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const serviceAreaData = JSON.parse(readFileSync(join(__dirname, '../lib/service-area-towns.json'), 'utf8'));
 
 const STATIC_ROUTES = [
   { path: '/', priority: '1.0', freq: 'weekly' },
   { path: '/services', priority: '0.9', freq: 'monthly' },
   { path: '/about', priority: '0.6', freq: 'monthly' },
-  { path: '/service-area', priority: '0.6', freq: 'monthly' },
+  { path: '/service-area', priority: '0.9', freq: 'monthly' },
   { path: '/contact', priority: '0.7', freq: 'monthly' },
   { path: '/blog', priority: '0.8', freq: 'daily' },
   { path: '/privacy-policy', priority: '0.2', freq: 'yearly' },
   { path: '/terms', priority: '0.2', freq: 'yearly' },
 ];
+
+const SERVICE_AREA_ROUTES = serviceAreaData.towns.map((t) => ({
+  path: `/service-area/${t.slug}`,
+  priority: '0.7',
+  freq: 'monthly',
+  lastmod: '2026-09-16',
+}));
 
 function urlTag(loc, { lastmod, priority, freq } = {}) {
   return [
@@ -33,6 +46,7 @@ export default async function handler(req, res) {
 
   const urls = [
     ...STATIC_ROUTES.map((r) => urlTag(site + r.path, { priority: r.priority, freq: r.freq })),
+    ...SERVICE_AREA_ROUTES.map((r) => urlTag(site + r.path, { priority: r.priority, freq: r.freq, lastmod: r.lastmod })),
     ...posts.map((p) =>
       urlTag(`${site}/blog/${p.slug}`, {
         lastmod: (p.date || new Date().toISOString()).slice(0, 10),
