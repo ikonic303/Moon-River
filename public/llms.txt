@@ -1,7 +1,7 @@
 # Moon River Construction
 
 > Contractor in Brighton, Colorado — concrete, landscaping, remodeling, and home renovations,
-> interior and exterior. Serving Brighton and the surrounding Colorado communities.
+> interior and exterior. Serving Brighton and communities across the Colorado Front Range.
 
 ## About
 
@@ -20,7 +20,105 @@ interior and exterior remodeling for local homeowners. Free quotes.
 
 ## Service area
 
-Brighton, Colorado and surrounding communities.
+Based in Brighton, Colorado. 86 Front Range municipalities have a dedicated page,
+grouped by real driving distance from Brighton. Henderson, Todd Creek and Reunion are also
+served; they are unincorporated communities and do not have their own page.
+
+Hub: https://www.moonriverconstructionco.com/service-area
+
+### Core service area — within 15 miles of Brighton (9)
+- Brighton, CO (home base): https://www.moonriverconstructionco.com/service-area/brighton
+- Lochbuie, CO (2.5 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/lochbuie
+- Commerce City, CO (7.1 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/commerce-city
+- Fort Lupton, CO (8.3 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/fort-lupton
+- Hudson, CO (10.2 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/hudson
+- Dacono, CO (11 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/dacono
+- Thornton, CO (11.1 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/thornton
+- Northglenn, CO (12.7 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/northglenn
+- Erie, CO (14.2 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/erie
+
+### Metro — 15 to 35 miles (48)
+- Broomfield, CO (15.1 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/broomfield
+- Federal Heights, CO (15.3 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/federal-heights
+- Firestone, CO (15.8 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/firestone
+- Frederick, CO (15.8 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/frederick
+- Keenesburg, CO (16.4 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/keenesburg
+- Westminster, CO (16.9 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/westminster
+- Lafayette, CO (17.9 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/lafayette
+- Platteville, CO (17.9 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/platteville
+- Aurora, CO (18.9 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/aurora
+- Louisville, CO (19.1 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/louisville
+- Denver, CO (20.3 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/denver
+- Lakeside, CO (20.6 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/lakeside
+- Longmont, CO (20.8 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/longmont
+- Mountain View, CO (20.8 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/mountain-view
+- Superior, CO (20.9 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/superior
+- Gilcrest, CO (21 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/gilcrest
+- Glendale, CO (21.1 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/glendale
+- Milliken, CO (21.5 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/milliken
+- Mead, CO (22 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/mead
+- Edgewater, CO (22.3 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/edgewater
+- Wheat Ridge, CO (23.5 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/wheat-ridge
+- Bennett, CO (23.8 mi south-east of Brighton): https://www.moonriverconstructionco.com/service-area/bennett
+- Boulder, CO (25.2 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/boulder
+- Greenwood Village, CO (25.2 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/greenwood-village
+- LaSalle, CO (25.6 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/lasalle
+- Centennial, CO (25.9 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/centennial
+- Cherry Hills Village, CO (25.9 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/cherry-hills-village
+- Arvada, CO (26.2 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/arvada
+- Evans, CO (26.4 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/evans
+- Sheridan, CO (26.6 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/sheridan
+- Lakewood, CO (26.9 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/lakewood
+- Englewood, CO (27.1 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/englewood
+- Foxfield, CO (27.1 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/foxfield
+- Berthoud, CO (27.6 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/berthoud
+- Golden, CO (28.4 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/golden
+- Littleton, CO (28.6 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/littleton
+- Bow Mar, CO (28.9 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/bow-mar
+- Garden City, CO (28.9 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/garden-city
+- Johnstown, CO (29.5 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/johnstown
+- Columbine Valley, CO (29.9 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/columbine-valley
+- Kersey, CO (30 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/kersey
+- Lyons, CO (30.3 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/lyons
+- Greeley, CO (30.4 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/greeley
+- Lone Tree, CO (31.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/lone-tree
+- Loveland, CO (32.5 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/loveland
+- Parker, CO (33.4 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/parker
+- Morrison, CO (33.5 mi south-west of Brighton): https://www.moonriverconstructionco.com/service-area/morrison
+- Jamestown, CO (34.5 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/jamestown
+
+### Extended — 35 to 60 miles, scheduled in blocks (16)
+- Windsor, CO (35.1 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/windsor
+- Castle Pines, CO (35.8 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/castle-pines
+- Eaton, CO (37.8 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/eaton
+- Severance, CO (37.8 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/severance
+- Nederland, CO (38.8 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/nederland
+- Timnath, CO (39.5 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/timnath
+- Ward, CO (39.9 mi west of Brighton): https://www.moonriverconstructionco.com/service-area/ward
+- Ault, CO (42.2 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/ault
+- Fort Collins, CO (42.2 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/fort-collins
+- Castle Rock, CO (42.4 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/castle-rock
+- Deer Trail, CO (45.7 mi south-east of Brighton): https://www.moonriverconstructionco.com/service-area/deer-trail
+- Pierce, CO (45.8 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/pierce
+- Estes Park, CO (48.4 mi north-west of Brighton): https://www.moonriverconstructionco.com/service-area/estes-park
+- Nunn, CO (50.7 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/nunn
+- Wellington, CO (51.1 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/wellington
+- Larkspur, CO (51.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/larkspur
+
+### By arrangement — over 60 miles, for projects large enough to justify the haul (13)
+- Palmer Lake, CO (60.2 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/palmer-lake
+- Monument, CO (62.3 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/monument
+- Raymer, CO (65.3 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/raymer
+- Ramah, CO (67.3 mi south-east of Brighton): https://www.moonriverconstructionco.com/service-area/ramah
+- Grover, CO (68 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/grover
+- Calhan, CO (70 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/calhan
+- Green Mountain Falls, CO (73.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/green-mountain-falls
+- Manitou Springs, CO (78 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/manitou-springs
+- Colorado Springs, CO (78.1 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/colorado-springs
+- Fountain, CO (89.4 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/fountain
+- Pueblo, CO (119.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/pueblo
+- Boone, CO (122.6 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/boone
+- Rye, CO (142.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/rye
 
 ## Key pages
 
