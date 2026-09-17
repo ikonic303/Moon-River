@@ -7,6 +7,12 @@ import Footer from './Footer';
 
 const PHONE = '(720) 807-0379';
 
+const ORIGIN = 'https://www.moonriverconstructionco.com';
+const URL = `${ORIGIN}/`;
+const TITLE = 'Concrete, Landscaping & Remodeling | Brighton, CO';
+const DESC = 'Moon River Construction is a Brighton, CO contractor for concrete, landscaping, and interior/exterior remodeling. Free quotes, fast response.';
+const IMAGE = `${ORIGIN}/assets/photo-hero.jpg`;
+
 const heroTrust = ['Local Brighton-area crew', 'Free, no-pressure quotes', 'Fast same-day response'];
 
 const serviceGroups = [
@@ -62,8 +68,19 @@ export default function Home({ phone = PHONE }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Head>
-        <title>Concrete, Landscaping &amp; Remodeling | Brighton, CO</title>
-        <meta name="description" content="Moon River Construction is a Brighton, CO contractor for concrete, landscaping, and interior/exterior remodeling. Free quotes, fast response." />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <link rel="canonical" href={URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={URL} />
+        <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMAGE} />
       </Head>
       <Header active="home" phone={phone} />
 

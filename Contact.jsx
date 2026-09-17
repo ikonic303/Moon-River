@@ -5,6 +5,12 @@ import Footer from './Footer';
 
 const PHONE = '(720) 807-0379';
 
+const ORIGIN = 'https://www.moonriverconstructionco.com';
+const URL = `${ORIGIN}/contact`;
+const TITLE = 'Contact Us | Free Quote | Brighton, CO';
+const DESC = "Request a free, no-pressure quote from Moon River Construction. Call, text, or fill out our form — we serve Brighton, CO and nearby areas.";
+const IMAGE = `${ORIGIN}/assets/photo-hero.jpg`;
+
 export default function Contact({ phone = PHONE }) {
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');
 
@@ -27,8 +33,19 @@ export default function Contact({ phone = PHONE }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Head>
-        <title>Contact Us | Free Quote | Brighton, CO</title>
-        <meta name="description" content="Request a free, no-pressure quote from Moon River Construction. Call, text, or fill out our form — we serve Brighton, CO and nearby areas." />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <link rel="canonical" href={URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={URL} />
+        <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMAGE} />
       </Head>
       <Header active="contact" phone={phone} />
 
