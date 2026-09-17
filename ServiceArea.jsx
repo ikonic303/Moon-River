@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
@@ -44,6 +44,51 @@ const TownCard = ({ t }) => (
   </a>
 );
 
+const SERVICE_AREA_CSS = `
+.sa-select { -webkit-appearance:none; appearance:none; }
+@media (max-width: 560px) {
+  .sa-tier-grid { grid-template-columns: repeat(auto-fill,minmax(150px,1fr)) !important; }
+  .sa-tier-heading { display:flex; flex-direction:column; align-items:flex-start; gap:4px; }
+  .sa-hero-actions a { flex: 1 1 auto; text-align:center; justify-content:center; }
+}
+`;
+
+function TownJump() {
+  const [value, setValue] = useState('');
+  const onChange = (e) => {
+    const v = e.target.value;
+    setValue(v);
+    if (v) window.location.href = v;
+  };
+  return (
+    <div style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.18)', borderRadius: 10, padding: '16px 18px', maxWidth: 420 }}>
+      <label htmlFor="sa-town-jump" style={{ display: 'block', fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: '1px', textTransform: 'uppercase', color: '#7BE0A6', marginBottom: 8 }}>Find your town</label>
+      <select
+        id="sa-town-jump"
+        className="sa-select"
+        value={value}
+        onChange={onChange}
+        style={{
+          width: '100%', minHeight: 46, background: '#0f2233', color: '#fff',
+          border: '1px solid rgba(255,255,255,0.25)', borderRadius: 7,
+          fontFamily: "'Barlow', sans-serif", fontSize: 16, padding: '10px 14px',
+        }}
+      >
+        <option value="">Jump to your town&hellip;</option>
+        {groups.map(([k, list]) => (
+          <optgroup key={k} label={TIER_LABEL[k][0]}>
+            {list.slice().sort((a, b) => a.name.localeCompare(b.name)).map((t) => (
+              <option key={t.slug} value={`/service-area/${t.slug}`}>
+                {t.name}{t.mi === 0 ? ' (home base)' : ` — ${t.mi} mi ${t.dir}`}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </select>
+    </div>
+  );
+}
+
 export default function ServiceArea({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
@@ -64,26 +109,28 @@ export default function ServiceArea({ phone }) {
         ))}
       </Head>
       <Header active="area" phone={phone} />
+      <style>{SERVICE_AREA_CSS}</style>
 
       <section style={{ background: 'linear-gradient(180deg,#102232 0%,#16324a 100%)', padding: 'clamp(56px,8vw,96px) 0' }}>
         <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
           <h1 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, color: '#fff', fontSize: 'clamp(34px,5.2vw,58px)', lineHeight: 1.05, letterSpacing: '-0.5px', margin: '0 0 18px', maxWidth: 820 }}>Serving Brighton &amp; the Colorado Front Range</h1>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: 19, lineHeight: 1.7, color: 'rgba(255,255,255,0.82)', maxWidth: 780, margin: '0 0 28px' }}>We are based in Brighton and we work outward from there. Below is every Front Range municipality we cover, grouped by how far it actually is from our home base — because the honest answer to &ldquo;do you come out here?&rdquo; depends on the drive, and we would rather tell you that up front than after you have booked.</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+          <div className="sa-hero-actions" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 28 }}>
             <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', background: '#2E9D5C', color: '#fff', fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 16, padding: '14px 24px', borderRadius: 7, textDecoration: 'none' }}>Get a Free Quote</a>
             <a href={'tel:+1' + phone.replace(/[^0-9]/g, '')} style={{ display: 'inline-flex', alignItems: 'center', background: '#E8702A', color: '#fff', fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 16, padding: '14px 24px', borderRadius: 7, textDecoration: 'none' }}>{phone}</a>
           </div>
+          <TownJump />
         </div>
       </section>
 
       {groups.map(([k, list]) => (
         <section key={k} style={{ padding: 'clamp(44px,6vw,72px) 0', background: k === 'metro' || k === 'outer' ? '#f6f8fa' : '#fff' }}>
           <div style={{ width: '100%', maxWidth: 1220, margin: '0 auto', padding: '0 clamp(18px,4vw,40px)' }}>
-            <h2 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 'clamp(24px,3.2vw,36px)', color: '#102232', margin: '0 0 8px' }}>
-              {TIER_LABEL[k][0]} <span style={{ fontWeight: 600, color: '#7b8894', fontSize: '0.6em' }}>{list.length} communities</span>
+            <h2 className="sa-tier-heading" style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 'clamp(24px,3.2vw,36px)', color: '#102232', margin: '0 0 8px' }}>
+              <span>{TIER_LABEL[k][0]}</span> <span style={{ fontWeight: 600, color: '#7b8894', fontSize: '0.6em' }}>{list.length} communities</span>
             </h2>
             <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: 17, lineHeight: 1.7, color: '#4a5866', margin: '0 0 22px', maxWidth: 760 }}>{TIER_LABEL[k][1]}</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(210px,1fr))', gap: 10 }}>
+            <div className="sa-tier-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(210px,1fr))', gap: 10 }}>
               {list.map((t) => <TownCard key={t.slug} t={t} />)}
             </div>
           </div>
