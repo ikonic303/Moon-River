@@ -10,6 +10,12 @@ function fmtDate(d) {
   catch { return ''; }
 }
 
+const ORIGIN = 'https://www.moonriverconstructionco.com';
+const URL = `${ORIGIN}/blog`;
+const TITLE = 'Blog | Tips & Guides | Moon River Construction';
+const DESC = 'Practical tips on concrete, landscaping, remodeling, and home maintenance from Moon River Construction, serving Brighton, Colorado.';
+const IMAGE = `${ORIGIN}/assets/photo-hero.jpg`;
+
 const Chip = ({ children }) => (
   <span style={{ display: 'inline-block', background: '#EAF6EF', color: '#2E9D5C', fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 12.5, letterSpacing: '.6px', textTransform: 'uppercase', padding: '5px 11px', borderRadius: 30 }}>{children}</span>
 );
@@ -20,8 +26,19 @@ export default function Blog({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Head>
-        <title>Blog | Tips &amp; Guides | Moon River Construction</title>
-        <meta name="description" content="Practical tips on concrete, landscaping, remodeling, and home maintenance from Moon River Construction, serving Brighton, Colorado." />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <link rel="canonical" href={URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={URL} />
+        <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMAGE} />
       </Head>
       <Header active="blog" phone={phone} />
 
