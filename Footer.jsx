@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 
 const PHONE = '(720) 807-0379';
 
+// Closest core-tier towns, sorted by distance from Brighton — a fixed editorial pick so the
+// shared footer doesn't have to bundle the full 86-town dataset on every page.
+const FOOTER_TOWNS = [
+  { name: 'Brighton',      slug: 'brighton' },
+  { name: 'Lochbuie',      slug: 'lochbuie' },
+  { name: 'Commerce City', slug: 'commerce-city' },
+  { name: 'Fort Lupton',   slug: 'fort-lupton' },
+  { name: 'Hudson',        slug: 'hudson' },
+  { name: 'Dacono',        slug: 'dacono' },
+  { name: 'Thornton',      slug: 'thornton' },
+];
+
 export default function Footer({ phone = PHONE }) {
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');
   const year = new Date().getFullYear();
@@ -35,6 +47,15 @@ export default function Footer({ phone = PHONE }) {
               <Link to="/service-area" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Service Area</Link>
               <Link to="/blog"         className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Blog</Link>
               <Link to="/contact"      className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Request a Quote</Link>
+            </div>
+          </div>
+          <div>
+            <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#fff', marginBottom: 18 }}>Service Area</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
+              {FOOTER_TOWNS.map((t) => (
+                <a key={t.slug} href={`/service-area/${t.slug}`} className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>{t.name}</a>
+              ))}
+              <Link to="/service-area" className="footer-link" style={{ color: '#7BE0A6', fontWeight: 600, textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>View all areas &rarr;</Link>
             </div>
           </div>
           <div>
