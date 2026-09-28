@@ -45,8 +45,10 @@ export default function Post({ phone }) {
     );
   }
 
-  const url = `https://www.moonriverconstructionco.com/blog/${post.slug}`;
+  const ORIGIN = 'https://www.moonriverconstructionco.com';
+  const url = `${ORIGIN}/blog/${post.slug}`;
   const desc = post.excerpt || '';
+  const image = `${ORIGIN}/assets/photo-hero.jpg`;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -66,12 +68,17 @@ export default function Post({ phone }) {
       <Head>
         <title>{post.title} | Moon River Construction</title>
         <meta name="description" content={desc} />
+        <link rel="canonical" href={url} />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={desc} />
-        <meta property="og:type" content="article" />
         <meta property="og:url" content={url} />
-        <meta name="twitter:card" content="summary" />
-        <link rel="canonical" href={url} />
+        <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={desc} />
+        <meta name="twitter:image" content={image} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
       <Header active="blog" phone={phone} />

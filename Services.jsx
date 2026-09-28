@@ -5,6 +5,12 @@ import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
 
+const ORIGIN = 'https://www.moonriverconstructionco.com';
+const URL = `${ORIGIN}/services`;
+const TITLE = 'Our Services | Brighton, CO Concrete & Remodeling';
+const DESC = 'Concrete, patios, driveways, landscaping, sod, kitchen and bath remodeling, flooring, and more for homeowners in Brighton, Colorado. Get a free quote.';
+const IMAGE = `${ORIGIN}/assets/photo-pad.jpg`;
+
 const CheckItem = ({ children }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9D5C" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
@@ -63,8 +69,19 @@ export default function Services({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Head>
-        <title>Our Services | Brighton, CO Concrete &amp; Remodeling</title>
-        <meta name="description" content="Concrete, patios, driveways, landscaping, sod, kitchen and bath remodeling, flooring, and more for homeowners in Brighton, Colorado. Get a free quote." />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <link rel="canonical" href={URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={URL} />
+        <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMAGE} />
       </Head>
       <Header active="services" phone={phone} />
 

@@ -4,6 +4,12 @@ import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import Footer from './Footer';
 
+const ORIGIN = 'https://www.moonriverconstructionco.com';
+const URL = `${ORIGIN}/terms`;
+const TITLE = 'Terms & Conditions | Moon River Construction';
+const DESC = 'Terms and conditions for using moonriverconstructionco.com and requesting services from Moon River Construction in Brighton, CO.';
+const IMAGE = `${ORIGIN}/assets/photo-hero.jpg`;
+
 const Section = ({ title, children }) => (
   <div style={{ marginBottom: 40 }}>
     <h2 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 22, color: '#102232', margin: '0 0 12px' }}>{title}</h2>
@@ -15,8 +21,19 @@ export default function Terms({ phone }) {
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Head>
-        <title>Terms &amp; Conditions | Moon River Construction</title>
-        <meta name="description" content="Terms and conditions for using moonriverconstructionco.com and requesting services from Moon River Construction in Brighton, CO." />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <link rel="canonical" href={URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={URL} />
+        <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMAGE} />
       </Head>
       <Header phone={phone} />
 

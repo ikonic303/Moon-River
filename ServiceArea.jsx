@@ -9,6 +9,7 @@ const ORIGIN = 'https://www.moonriverconstructionco.com';
 const URL = `${ORIGIN}/service-area`;
 const TITLE = 'Service Area | Moon River Construction — Brighton, CO & the Front Range';
 const DESC = 'Moon River Construction serves Brighton and communities across the Colorado Front Range with concrete, landscaping, sprinkler systems, remodeling, flooring and interior painting. Free quotes.';
+const IMAGE = `${ORIGIN}/assets/photo-hero.jpg`;
 
 const TIER_LABEL = {
   core: ['Core service area', 'Within 15 miles of Brighton — where we are working most weeks.'],
@@ -101,9 +102,11 @@ export default function ServiceArea({ phone }) {
         <meta property="og:description" content={DESC} />
         <meta property="og:url" content={URL} />
         <meta property="og:site_name" content="Moon River Construction" />
+        <meta property="og:image" content={IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:description" content={DESC} />
+        <meta name="twitter:image" content={IMAGE} />
         {jsonLd.map((o, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(o)}</script>
         ))}
