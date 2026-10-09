@@ -9,6 +9,9 @@ const serviceAreaData = JSON.parse(readFileSync(join(__dirname, '../lib/service-
 const STATIC_ROUTES = [
   { path: '/', priority: '1.0', freq: 'weekly' },
   { path: '/services', priority: '0.9', freq: 'monthly' },
+  { path: '/services/concrete', priority: '0.9', freq: 'monthly' },
+  { path: '/services/sprinkler-repair', priority: '0.9', freq: 'monthly' },
+  { path: '/services/sod-installation', priority: '0.9', freq: 'monthly' },
   { path: '/about', priority: '0.6', freq: 'monthly' },
   { path: '/service-area', priority: '0.9', freq: 'monthly' },
   { path: '/contact', priority: '0.7', freq: 'monthly' },
@@ -17,11 +20,13 @@ const STATIC_ROUTES = [
   { path: '/terms', priority: '0.2', freq: 'yearly' },
 ];
 
-const SERVICE_AREA_ROUTES = serviceAreaData.towns.map((t) => ({
+// Towns more than 60 miles out ("outer" tier, taken on by arrangement only) keep their pages
+// but are noindexed, so they are left out of the sitemap.
+const SERVICE_AREA_ROUTES = serviceAreaData.towns.filter((t) => t.tier !== 'outer').map((t) => ({
   path: `/service-area/${t.slug}`,
   priority: '0.7',
   freq: 'monthly',
-  lastmod: '2026-09-16',
+  lastmod: '2026-10-08',
 }));
 
 function urlTag(loc, { lastmod, priority, freq } = {}) {
