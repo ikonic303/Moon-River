@@ -26,7 +26,7 @@ const SERVICE_AREA_ROUTES = serviceAreaData.towns.filter((t) => t.tier !== 'oute
   path: `/service-area/${t.slug}`,
   priority: '0.7',
   freq: 'monthly',
-  lastmod: '2026-10-08',
+  lastmod: '2026-10-09',
 }));
 
 function urlTag(loc, { lastmod, priority, freq } = {}) {
