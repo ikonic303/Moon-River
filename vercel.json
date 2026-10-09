@@ -1,6 +1,28 @@
 {
-  "crons": [{ "path": "/api/auto-blog-generate", "schedule": "0 13 * * 1-5" }],
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/blog/stamped-vs-broom-finish-patios-brighton-yard(/?)", "destination": "/blog/stamped-vs-broom-finished-patios-choosing-brighton-yard", "permanent": true },
+    { "source": "/blog/stamped-vs-broom-finished-concrete-patios-brighton(/?)", "destination": "/blog/stamped-vs-broom-finished-patios-choosing-brighton-yard", "permanent": true },
+    { "source": "/blog/stamped-vs-broom-finished-concrete-patios-brighton-2(/?)", "destination": "/blog/stamped-vs-broom-finished-patios-choosing-brighton-yard", "permanent": true },
+    { "source": "/blog/stamped-vs-broom-finished-concrete-patios-brighton-guide(/?)", "destination": "/blog/stamped-vs-broom-finished-patios-choosing-brighton-yard", "permanent": true },
+    { "source": "/blog/repair-or-replace-concrete-driveway-brighton-co(/?)", "destination": "/blog/repair-replace-brighton-concrete-driveway-guide", "permanent": true },
+    { "source": "/blog/repair-replace-brighton-concrete-driveway(/?)", "destination": "/blog/repair-replace-brighton-concrete-driveway-guide", "permanent": true },
+    { "source": "/blog/artificial-turf-vs-natural-grass-brighton-yard-guide(/?)", "destination": "/blog/artificial-turf-vs-natural-grass-brighton-homeowners-guide", "permanent": true },
+    { "source": "/blog/artificial-turf-vs-natural-grass-front-range-yards(/?)", "destination": "/blog/artificial-turf-vs-natural-grass-brighton-homeowners-guide", "permanent": true },
+    { "source": "/blog/building-resilient-retaining-wall-brighton-homeowners-guide(/?)", "destination": "/blog/building-strong-essentials-durable-retaining-wall-brighton-co", "permanent": true },
+    { "source": "/blog/the-secrets-to-a-long-lasting-retaining-wall-in-brighton-co(/?)", "destination": "/blog/building-strong-essentials-durable-retaining-wall-brighton-co", "permanent": true },
+    { "source": "/blog/choosing-reliable-contractor-brighton-guide(/?)", "destination": "/blog/choosing-reliable-contractor-brighton-essential-guide", "permanent": true },
+    { "source": "/blog/choosing-reliable-local-contractor-brighton-co(/?)", "destination": "/blog/choosing-reliable-contractor-brighton-essential-guide", "permanent": true },
+    { "source": "/blog/essential-questions-hiring-concrete-remodeling-crews-brighton-co(/?)", "destination": "/blog/essential-questions-hiring-concrete-remodeling-crews-brighton-co-2", "permanent": true },
+    { "source": "/blog/brighton-spring-cleanup-curb-appeal-home-fresh-start(/?)", "destination": "/blog/brighton-spring-refresh-property-cleanup-curb-appeal", "permanent": true },
+    { "source": "/blog/spring-into-action-brighton-property-cleanup-curb-appeal-guide(/?)", "destination": "/blog/brighton-spring-refresh-property-cleanup-curb-appeal", "permanent": true },
+    { "source": "/blog/lvp-tile-hardwood-brighton-flooring-guide(/?)", "destination": "/blog/choosing-perfect-floor-lvp-tile-hardwood-brighton-homes", "permanent": true },
+    { "source": "/blog/lvp-vs-tile-vs-hardwood-choosing-brighton-home-flooring-2(/?)", "destination": "/blog/choosing-perfect-floor-lvp-tile-hardwood-brighton-homes", "permanent": true },
+    { "source": "/blog/guard-your-concrete-preventing-freeze-thaw-damage-brighton-co(/?)", "destination": "/blog/battling-winter-protecting-brighton-concrete-freeze-thaw-damage", "permanent": true },
+    { "source": "/blog/designing-dream-deck-outdoor-living-space-brighton-co(/?)", "destination": "/blog/designing-ideal-deck-outdoor-living-space-brighton-co", "permanent": true },
+    { "source": "/blog/flawless-walls-interior-painting-prep-lasting-finish(/?)", "destination": "/blog/mastering-interior-painting-prep-secrets-lasting-finish", "permanent": true },
+    { "source": "/blog/planning-low-water-low-maintenance-landscape-brighton(/?)", "destination": "/blog/brighton-xeriscape-low-water-low-maintenance-landscaping", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/sitemap" },
     { "source": "/service-area/:slug", "destination": "/service-area/:slug.html" }

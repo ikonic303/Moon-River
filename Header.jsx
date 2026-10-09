@@ -25,7 +25,9 @@ const NAV_LINKS = [
 export default function Header({ active = 'home', phone = PHONE }) {
   const [scrolled, setScrolled]   = useState(false);
   const [menuOpen, setMenuOpen]   = useState(false);
-  const [vw, setVw]               = useState(typeof window !== 'undefined' ? window.innerWidth : 1280);
+  // Start from the same width the static HTML was rendered at so hydration matches,
+  // then switch to the real viewport width once mounted.
+  const [vw, setVw]               = useState(1280);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 14);
@@ -36,6 +38,8 @@ export default function Header({ active = 'home', phone = PHONE }) {
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize);
+    onResize();
+    onScroll();
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onResize);

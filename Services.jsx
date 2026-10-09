@@ -35,6 +35,21 @@ const QuoteBtn = () => (
   </Link>
 );
 
+const MoreLink = ({ to, children }) => (
+  <Link to={to} className="read-story" style={{
+    display: 'inline-flex', alignItems: 'center', gap: 7,
+    color: '#2E9D5C', fontFamily: "'Barlow Semi Condensed', sans-serif",
+    fontWeight: 700, fontSize: 17, textDecoration: 'none',
+  }}>
+    {children}
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+    </svg>
+  </Link>
+);
+
+const btnRow = { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px 26px' };
+
 const serviceGroups = [
   {
     title: 'Exterior Services',
@@ -123,7 +138,10 @@ export default function Services({ phone }) {
                 <CheckItem>Small pours &amp; pads</CheckItem>
                 <CheckItem>Concrete repairs</CheckItem>
               </div>
-              <QuoteBtn />
+              <div style={btnRow}>
+                <QuoteBtn />
+                <MoreLink to="/services/concrete">Concrete details &amp; FAQs</MoreLink>
+              </div>
             </div>
           </div>
         </div>
@@ -153,7 +171,10 @@ export default function Services({ phone }) {
                 <CheckItem>Seasonal start-up &amp; blowout</CheckItem>
                 <CheckItem>System troubleshooting</CheckItem>
               </div>
-              <QuoteBtn />
+              <div style={btnRow}>
+                <QuoteBtn />
+                <MoreLink to="/services/sprinkler-repair">Sprinkler repair details &amp; FAQs</MoreLink>
+              </div>
             </div>
           </div>
         </div>
@@ -183,7 +204,10 @@ export default function Services({ phone }) {
                 <CheckItem>Property turnovers</CheckItem>
                 <CheckItem>Yard repairs &amp; patches</CheckItem>
               </div>
-              <QuoteBtn />
+              <div style={btnRow}>
+                <QuoteBtn />
+                <MoreLink to="/services/sod-installation">Sod installation details &amp; FAQs</MoreLink>
+              </div>
             </div>
           </div>
         </div>

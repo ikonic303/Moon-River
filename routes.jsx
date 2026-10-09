@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import Services from './Services';
+import ServicePage from './ServicePage';
 import About from './About';
 import ServiceArea from './ServiceArea';
 import Contact from './Contact';
@@ -44,6 +45,9 @@ async function blogStaticPaths() {
 export const routes = [
   { path: '/', element: <Home phone={PHONE} /> },
   { path: '/services', element: <Services phone={PHONE} /> },
+  { path: '/services/concrete', element: <ServicePage service="concrete" phone={PHONE} /> },
+  { path: '/services/sprinkler-repair', element: <ServicePage service="sprinkler" phone={PHONE} /> },
+  { path: '/services/sod-installation', element: <ServicePage service="sod" phone={PHONE} /> },
   { path: '/about', element: <About phone={PHONE} /> },
   { path: '/service-area', element: <ServiceArea phone={PHONE} /> },
   { path: '/contact', element: <Contact phone={PHONE} /> },

@@ -20,9 +20,9 @@ interior and exterior remodeling for local homeowners. Free quotes.
 
 ## Service area
 
-Based in Brighton, Colorado. 86 Front Range municipalities have a dedicated page,
-grouped by real driving distance from Brighton. Henderson, Todd Creek and Reunion are also
-served; they are unincorporated communities and do not have their own page.
+Based in Brighton, Colorado. Front Range municipalities within about 60 miles have a
+dedicated page, grouped by straight-line distance from Brighton. Henderson, Todd Creek and
+Reunion are also served; they are unincorporated communities and do not have their own page.
 
 Hub: https://www.moonriverconstructionco.com/service-area
 
@@ -105,25 +105,15 @@ Hub: https://www.moonriverconstructionco.com/service-area
 - Wellington, CO (51.1 mi north of Brighton): https://www.moonriverconstructionco.com/service-area/wellington
 - Larkspur, CO (51.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/larkspur
 
-### By arrangement — over 60 miles, for projects large enough to justify the haul (13)
-- Palmer Lake, CO (60.2 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/palmer-lake
-- Monument, CO (62.3 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/monument
-- Raymer, CO (65.3 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/raymer
-- Ramah, CO (67.3 mi south-east of Brighton): https://www.moonriverconstructionco.com/service-area/ramah
-- Grover, CO (68 mi north-east of Brighton): https://www.moonriverconstructionco.com/service-area/grover
-- Calhan, CO (70 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/calhan
-- Green Mountain Falls, CO (73.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/green-mountain-falls
-- Manitou Springs, CO (78 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/manitou-springs
-- Colorado Springs, CO (78.1 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/colorado-springs
-- Fountain, CO (89.4 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/fountain
-- Pueblo, CO (119.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/pueblo
-- Boone, CO (122.6 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/boone
-- Rye, CO (142.5 mi south of Brighton): https://www.moonriverconstructionco.com/service-area/rye
+Projects more than 60 miles from Brighton are taken on by arrangement only.
 
 ## Key pages
 
 - Home: https://www.moonriverconstructionco.com/
 - Services: https://www.moonriverconstructionco.com/services
+- Concrete (driveways, patios, repairs): https://www.moonriverconstructionco.com/services/concrete
+- Sprinkler repair and winterization: https://www.moonriverconstructionco.com/services/sprinkler-repair
+- Sod installation: https://www.moonriverconstructionco.com/services/sod-installation
 - Service area: https://www.moonriverconstructionco.com/service-area
 - About: https://www.moonriverconstructionco.com/about
 - Contact: https://www.moonriverconstructionco.com/contact

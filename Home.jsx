@@ -20,14 +20,15 @@ const serviceGroups = [
     title: 'Exterior Services',
     blurb: 'Concrete, hardscapes, landscaping, and outdoor living spaces.',
     items: [
-      'Concrete Installation & Repair',
+      { label: 'Concrete Installation & Repair', to: '/services/concrete' },
       'Patios & Walkways',
       'Driveways',
       'Retaining Walls',
       'Decks & Outdoor Living Spaces',
       'Landscaping & Landscape Design',
+      { label: 'Sod Installation', to: '/services/sod-installation' },
       'Artificial Turf',
-      'Irrigation & Sprinkler Systems',
+      { label: 'Sprinkler Repair & Irrigation', to: '/services/sprinkler-repair' },
       'Fencing',
       'Excavation & Grading',
     ],
@@ -174,14 +175,19 @@ export default function Home({ phone = PHONE }) {
                 <h3 style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 26, color: '#102232', margin: '0 0 6px' }}>{g.title}</h3>
                 <p style={{ color: '#5C6873', fontSize: 16, margin: '0 0 24px' }}>{g.blurb}</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(210px,1fr))', gap: '13px 18px', marginBottom: 28 }}>
-                  {g.items.map(item => (
-                    <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9D5C" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-                        <polyline points="20 6 9 17 4 12"/>
-                      </svg>
-                      <span style={{ color: '#33404A', fontSize: 15.5, fontWeight: 500 }}>{item}</span>
-                    </div>
-                  ))}
+                  {g.items.map(item => {
+                    const label = typeof item === 'string' ? item : item.label;
+                    return (
+                      <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E9D5C" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        {typeof item === 'string'
+                          ? <span style={{ color: '#33404A', fontSize: 15.5, fontWeight: 500 }}>{label}</span>
+                          : <Link to={item.to} style={{ color: '#1F7A47', fontSize: 15.5, fontWeight: 600, textDecoration: 'underline', textDecorationColor: 'rgba(46,157,92,0.45)', textUnderlineOffset: 3 }}>{label}</Link>}
+                      </div>
+                    );
+                  })}
                 </div>
                 <Link to="/services" className="read-story" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, color: '#2E9D5C', fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: '.3px', textDecoration: 'none' }}>
                   View All Services

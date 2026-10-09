@@ -16,18 +16,12 @@ export default function Contact({ phone = PHONE }) {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://links.ikonicmarketing303.com/js/form_embed.js';
+    script.src = 'https://links.moonriverconstructionco.com/js/form_embed.js';
     script.async = true;
     document.body.appendChild(script);
     return () => {
       if (document.body.contains(script)) document.body.removeChild(script);
     };
-  }, []);
-
-  useEffect(() => {
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead');
-    }
   }, []);
 
   return (
@@ -97,7 +91,7 @@ export default function Contact({ phone = PHONE }) {
             {/* Embedded GHL form */}
             <div style={{ minHeight: 1047 }}>
               <iframe
-                src="https://links.ikonicmarketing303.com/widget/form/7eTbLk8DXh94lcFz84OR"
+                src="https://links.moonriverconstructionco.com/widget/form/7eTbLk8DXh94lcFz84OR"
                 style={{ width: '100%', height: '1047px', border: 'none', borderRadius: 3 }}
                 id="inline-7eTbLk8DXh94lcFz84OR"
                 data-layout="{'id':'INLINE'}"
@@ -107,11 +101,11 @@ export default function Contact({ phone = PHONE }) {
                 data-activation-value=""
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
-                data-form-name="Solar Lead Form"
+                data-form-name="Moon River Project Quote"
                 data-height="1047"
                 data-layout-iframe-id="inline-7eTbLk8DXh94lcFz84OR"
                 data-form-id="7eTbLk8DXh94lcFz84OR"
-                title="Solar Lead Form"
+                title="Moon River Project Quote"
               />
             </div>
           </div>
