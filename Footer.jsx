@@ -34,10 +34,10 @@ export default function Footer({ phone = PHONE }) {
           <div>
             <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#fff', marginBottom: 18 }}>Services</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
-              <Link to="/services" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Concrete & Hardscapes</Link>
-              <Link to="/services" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Landscaping & Outdoor Living</Link>
-              <Link to="/services" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Interior Remodeling</Link>
-              <Link to="/services" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Home Renovations</Link>
+              <Link to="/services/concrete"         className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Concrete</Link>
+              <Link to="/services/sprinkler-repair" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Sprinkler Repair</Link>
+              <Link to="/services/sod-installation" className="footer-link" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>Sod Installation</Link>
+              <Link to="/services"                  className="footer-link" style={{ color: '#7BE0A6', fontWeight: 600, textDecoration: 'none', fontSize: 15.5, transition: 'color .15s ease' }}>All services &rarr;</Link>
             </div>
           </div>
           <div>

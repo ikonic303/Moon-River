@@ -21,14 +21,17 @@ const TIER_LABEL = {
 const { towns } = data;
 const groups = ['core', 'metro', 'extended', 'outer'].map((k) => [k, towns.filter((t) => t.tier === k).sort((a, b) => a.mi - b.mi)]);
 
+// The "outer" tier pages are noindexed, so they stay out of the structured list too.
+const listedTowns = towns.filter((t) => t.tier !== 'outer');
+
 const jsonLd = [
   {
     '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Service Area', url: URL,
     about: { '@type': 'GeneralContractor', name: 'Moon River Construction', telephone: '(720) 807-0379', url: `${ORIGIN}/`, areaServed: 'Colorado Front Range' },
   },
   {
-    '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: towns.length,
-    itemListElement: towns.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: `${t.name}, CO`, url: `${ORIGIN}/service-area/${t.slug}` })),
+    '@context': 'https://schema.org', '@type': 'ItemList', numberOfItems: listedTowns.length,
+    itemListElement: listedTowns.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: `${t.name}, CO`, url: `${ORIGIN}/service-area/${t.slug}` })),
   },
   {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [

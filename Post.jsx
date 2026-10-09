@@ -4,6 +4,7 @@ import { Head } from 'vite-react-ssg';
 import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
+import { serviceForPost } from './lib/service-pages.js';
 
 function fmtDate(d) {
   try { return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); }
@@ -47,6 +48,7 @@ export default function Post({ phone }) {
 
   const ORIGIN = 'https://www.moonriverconstructionco.com';
   const url = `${ORIGIN}/blog/${post.slug}`;
+  const related = serviceForPost(post);
   const desc = post.excerpt || '';
   const image = `${ORIGIN}/assets/photo-hero.jpg`;
   const jsonLd = {
@@ -64,7 +66,8 @@ export default function Post({ phone }) {
 
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
-      <style>{POST_CSS}</style>
+      {/* Raw CSS: as a text child React escapes the quotes (&#x27;), which broke the font rules and hydration. */}
+      <style dangerouslySetInnerHTML={{ __html: POST_CSS }} />
       <Head>
         <title>{post.title} | Moon River Construction</title>
         <meta name="description" content={desc} />
@@ -104,6 +107,18 @@ export default function Post({ phone }) {
                 <span key={t} style={{ background: '#F4F6F5', border: '1px solid #E6EAE8', color: '#5C6873', fontSize: 13.5, padding: '6px 13px', borderRadius: 30 }}>#{t}</span>
               ))}
             </div>
+          )}
+          {related && (
+            <aside style={{ marginTop: 36, background: '#F4F6F5', border: '1px solid #E6EAE8', borderRadius: 14, padding: '22px 24px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '12px 20px' }}>
+              <div>
+                <div style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 800, fontSize: 20, color: '#102232', marginBottom: 4 }}>{related.name} in Brighton, CO</div>
+                <div style={{ color: '#5C6873', fontSize: 16 }}>Local crew, free on-site quotes.</div>
+              </div>
+              <Link to={related.path} className="read-story" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, color: '#2E9D5C', fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 17, textDecoration: 'none' }}>
+                Our {related.name.toLowerCase()} service
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </Link>
+            </aside>
           )}
         </div>
       </article>
