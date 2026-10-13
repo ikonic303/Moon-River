@@ -5,6 +5,7 @@ import Header from './Header';
 import CTA from './CTA';
 import Footer from './Footer';
 import { SERVICE_PAGES, CORE_TOWNS } from './lib/service-pages.js';
+import { SERVICE_TOWN_RULES, RULES_CHECKED } from './lib/service-town-rules.js';
 
 const PHONE = '(720) 807-0379';
 const ORIGIN = 'https://www.moonriverconstructionco.com';
@@ -39,6 +40,8 @@ export default function ServicePage({ service, phone = PHONE }) {
   const image = `${ORIGIN}${s.ogImage}`;
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');
   const others = Object.values(SERVICE_PAGES).filter((o) => o.key !== s.key);
+  const townRules = SERVICE_TOWN_RULES[s.key] || [];
+  const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return 'source'; } };
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -182,6 +185,44 @@ export default function ServicePage({ service, phone = PHONE }) {
           </div>
         </div>
       </section>
+
+      {/* LOCAL RULES, TOWN BY TOWN */}
+      {s.rules && townRules.length > 0 && (
+        <section style={{ background: '#fff', padding: 'clamp(56px,8vw,100px) 0' }}>
+          <div style={WRAP}>
+            <div style={{ maxWidth: 760, marginBottom: 30 }}>
+              <Eyebrow>Local Rules</Eyebrow>
+              <H2>{s.rules.heading}</H2>
+              <p style={{ color: '#4A5862', fontSize: 'clamp(16px,1.6vw,18px)', lineHeight: 1.7, margin: '0 0 14px' }}>
+                {s.rules.intro} Checked {RULES_CHECKED} on each town’s and water provider’s own website; rules change, so confirm with the linked office before work starts.
+              </p>
+              {s.rules.note && (
+                <p style={{ color: '#33404A', fontSize: 16.5, lineHeight: 1.7, margin: 0, background: '#EEF4F0', borderLeft: '3px solid #2E9D5C', padding: '12px 16px', borderRadius: '0 8px 8px 0' }}>
+                  {s.rules.note.map((part, i) => (typeof part === 'string'
+                    ? <React.Fragment key={i}>{part}</React.Fragment>
+                    : <a key={i} href={part.href} style={{ color: '#1F7A47', fontWeight: 600 }}>{part.text}</a>))}
+                </p>
+              )}
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 16 }}>
+              {townRules.map((r) => (
+                <div key={r.slug} style={{ background: '#F4F6F5', border: '1px solid #E6EAE8', borderRadius: 14, padding: '22px 24px' }}>
+                  <h3 style={{ fontFamily: HEAD_FONT, fontWeight: 800, fontSize: 21, color: '#102232', margin: '0 0 10px' }}>
+                    <a href={`/service-area/${r.slug}`} style={{ color: '#102232', textDecoration: 'none' }}>{r.town}</a>
+                  </h3>
+                  {r.items.map((it) => (
+                    <p key={it.label} style={{ color: '#4A5862', fontSize: 15.5, lineHeight: 1.65, margin: '0 0 10px' }}>
+                      <strong style={{ color: '#102232' }}>{it.label}:</strong> {it.text}{' '}
+                      {it.url && <a href={it.url} target="_blank" rel="noopener" style={{ color: '#7b8894', fontSize: 14 }}>({hostOf(it.url)})</a>}
+                    </p>
+                  ))}
+                  <a href={`/service-area/${r.slug}`} className="read-story" style={{ ...textLink, fontSize: 16 }}>All {r.town} rules <Arrow /></a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* HOW IT WORKS */}
       <section style={{ background: '#102232', padding: 'clamp(56px,8vw,100px) 0' }}>
