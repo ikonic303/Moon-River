@@ -24,6 +24,24 @@ export default function Contact({ phone = PHONE }) {
     };
   }, []);
 
+  /* Meta Lead (and GA4 generate_lead, once a GA4 tag exists) when the embedded GHL quote form reports a
+     successful submit. Measured 2026-10-15: the GHL form's own fbPixelId is blank, so Meta never got a Lead.
+     The GHL form widget posts ["set-sticky-contacts", "_ud", ...] to the parent page only after a successful
+     submission. Fire once per page view. */
+  useEffect(() => {
+    let sent = false;
+    const onMessage = (e) => {
+      if (sent || e.origin !== 'https://links.moonriverconstructionco.com') return;
+      const d = e.data;
+      if (!Array.isArray(d) || d[0] !== 'set-sticky-contacts' || d[1] !== '_ud') return;
+      sent = true;
+      if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+      if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form_id: 'quote', page_path: window.location.pathname });
+    };
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, []);
+
   return (
     <div style={{ overflowX: 'hidden', background: '#fff' }}>
       <Head>
