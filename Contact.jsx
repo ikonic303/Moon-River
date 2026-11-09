@@ -11,12 +11,17 @@ const TITLE = 'Contact Us | Free Quote | Brighton, CO';
 const DESC = "Request a free, no-pressure quote from Moon River Construction. Call, text, or fill out our form — we serve Brighton, CO and nearby areas.";
 const IMAGE = `${ORIGIN}/assets/photo-hero.jpg`;
 
+/* The form loads from GHL's own host, not links.moonriverconstructionco.com: that branded host's robots.txt
+   (GHL-controlled) is "Disallow: /", so Search Console reported the embedded form as "Blocked by robots.txt"
+   (2026-11-09). Same form id, same submissions. */
+const FORM_ORIGINS = ['https://api.leadconnectorhq.com', 'https://links.moonriverconstructionco.com'];
+
 export default function Contact({ phone = PHONE }) {
   const phoneHref = 'tel:+1' + phone.replace(/[^0-9]/g, '');
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://links.moonriverconstructionco.com/js/form_embed.js';
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
     script.async = true;
     document.body.appendChild(script);
     return () => {
@@ -31,7 +36,7 @@ export default function Contact({ phone = PHONE }) {
   useEffect(() => {
     let sent = false;
     const onMessage = (e) => {
-      if (sent || e.origin !== 'https://links.moonriverconstructionco.com') return;
+      if (sent || !FORM_ORIGINS.includes(e.origin)) return;
       const d = e.data;
       if (!Array.isArray(d) || d[0] !== 'set-sticky-contacts' || d[1] !== '_ud') return;
       sent = true;
@@ -109,7 +114,7 @@ export default function Contact({ phone = PHONE }) {
             {/* Embedded GHL form */}
             <div style={{ minHeight: 1047 }}>
               <iframe
-                src="https://links.moonriverconstructionco.com/widget/form/7eTbLk8DXh94lcFz84OR"
+                src="https://api.leadconnectorhq.com/widget/form/7eTbLk8DXh94lcFz84OR"
                 style={{ width: '100%', height: '1047px', border: 'none', borderRadius: 3 }}
                 id="inline-7eTbLk8DXh94lcFz84OR"
                 data-layout="{'id':'INLINE'}"
